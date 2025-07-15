@@ -9,4 +9,3 @@ export async function connectDB() {
         process.exit(1);
     }
 }
-//mongodb+srv://ujjwalhyd:ujjwalhyd123@cluster0.gjteto6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

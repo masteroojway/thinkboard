@@ -12,11 +12,13 @@ app.use(rateLimiter);
 
 app.use("/app/routes", router)
 
-app.listen(3000, ()=>{
-    console.log("Hi there hello");
-})
 
-connectDB();
+
+connectDB().then(()=>{
+    app.listen(3000, ()=>{
+        console.log("Hi there hello");
+    })
+});
 
 app.get('/api/status', (req, res)=>{
     res.send("Hi person");
