@@ -7,7 +7,6 @@ import toast from 'react-hot-toast'
 const App = () => {
   return (
     <div data-theme="forest">
-      <button onClick={()=>toast.error("Congrats")} className='btn btn-outline'>Clickity click</button>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/create' element={<Create />} />

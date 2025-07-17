@@ -3,13 +3,16 @@ import { connectDB } from "./config/mondoDB.js";
 import dotenv from "dotenv"
 import router from "./routes/noteRoutes.js"
 import rateLimiter from "./middleware/rateLimiter.js";
+import cors from 'cors';
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
 app.use(rateLimiter);
-
+app.use(cors({
+    origin: ["http://localhost:5173"],
+}));
 app.use("/app/routes", router)
 
 
